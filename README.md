@@ -9,7 +9,8 @@ If accuracy is low, precision and recall will be useful metrics to determine any
 $$Precision = \frac{TP}{TP+FP}$$
 $$Recall = \frac{TP}{TP+FN}$$
 If classes are heavily unbalanced (e.g. there are relatively few low-fat products) it may be appropriate to use an accuracy metric that reflects both precision and recall, like F1 score.
-$$F1 = \frac{2*Precision*Recall}{Precision+Recall} = \frac{2*TP}{2*TP+FP+FN}$$
+
+$$F1 = \frac{2*TP}{2*TP+FP+FN}$$
 
 From a business value standpoint, we will care much more about maximizing precision (ensuring that when we say something is low-fat, it actually is) than about maximizing recall (ensuring that we don't fail to identify low-fat products).
 This is because if we call a product low-fat when it actually isn't, there may be regulatory implications or health problems for our customers, and we may be sued.
@@ -22,7 +23,7 @@ For the goal of calorie regression, the primary metric is MAE (Mean Absolute Err
 The formula is given below where x is the actual value, y is the predicted value, and D is the number of data points being evaluated.
 $$\sum_{i=1}^{D}|x_i-y_i|$$
 
-From a business value standpoint, we may also want to consider percentage error, where we additionally divide the error by the true value ($$x_i$$) so the metric is more interpretable for low-calorie items.
+From a business value standpoint, we may also want to consider percentage error, where we additionally divide the error by the true value (x) so the metric is more interpretable for low-calorie items.
 Accurate calorie tests are actually substantially cheaper, as they simply involve burning the food to heat water and measuring the temperature, and many labs will give them out for free. For some applications, however, like reconstructing nutrition for incomplete historical data where samples to burn are inaccessible, the business value may be substantial and harder to quantify.
 
 
