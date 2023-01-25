@@ -3,6 +3,7 @@
 ## Performance Metrics
 
 **[Comment]: You state these two things here are the goal for your project. This is true in terms of what we want to identify, but what about what this actually does for us? You go into details below in the business section but I think it would be more helpful to a stakeholder to explain that first before going into the details of how we are analyzing. In my experience, stakeholders usually want to know what is the gain/why are we doing this before asking how does it work.**
+
 The two goals of this project - low-fat classification and calorie regression - have two different performance metrics. For the initial goal of binary low-fat classification, an appropriate performance metric is simple percent accuracy.
 Computed from a simple confusion matrix (TN, TP, FN, FP), accuracy is computed like so:
 $$Accuracy = \frac{TP+TN}{TP+TN+FP+FN}$$
@@ -18,6 +19,7 @@ This is because if we call a product low-fat when it actually isn't, there may b
 Maximizing recall is still important, however, as being able to correctly identify as many low-fat products as possible makes them more marketable, increasing sales. False negatives pose less of an existential risk to our business, however.
 
 **[Comment]: I know this is hypothetical since it may be outside the scope of this class anyway, but if you were able to obtain favorable results, could you add more here to make it clear how the results would suffice in place of the actual required tests and allow skipping?**
+
 A test for fat content in food costs around $199.00 (Source: Medallion Labs). If this application allowed us to skip this step for a large number of products and regulators were willing to accept these results, there could be significant savings over a large product catalog.
 
 
