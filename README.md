@@ -1,8 +1,8 @@
 # CS5265_Project1
 
-## Performance Metrics
+This project will investigate how well nutrition facts can be approximated from product branding and the ingredients list. A successful model could be used to impute historical data missing from official sources and provide a preliminary data source of product nutrients before official test results are made available. Understanding product nutrition details is critical for many applications, especially in healthcare, so building tooling to fill in data gaps could be quite valuable in these areas.
 
-**[Comment]: You state these two things here are the goal for your project. This is true in terms of what we want to identify, but what about what this actually does for us? You go into details below in the business section but I think it would be more helpful to a stakeholder to explain that first before going into the details of how we are analyzing. In my experience, stakeholders usually want to know what is the gain/why are we doing this before asking how does it work.**
+## Performance Metrics
 
 The two goals of this project - low-fat classification and calorie regression - have two different performance metrics. For the initial goal of binary low-fat classification, an appropriate performance metric is simple percent accuracy.
 Computed from a simple confusion matrix (TN, TP, FN, FP), accuracy is computed like so:
@@ -18,10 +18,7 @@ From a business value standpoint, we will care much more about maximizing precis
 This is because if we call a product low-fat when it actually isn't, there may be regulatory implications or health problems for our customers, and we may be sued.
 Maximizing recall is still important, however, as being able to correctly identify as many low-fat products as possible makes them more marketable, increasing sales. False negatives pose less of an existential risk to our business, however.
 
-**[Comment]: I know this is hypothetical since it may be outside the scope of this class anyway, but if you were able to obtain favorable results, could you add more here to make it clear how the results would suffice in place of the actual required tests and allow skipping?**
-
-A test for fat content in food costs around $199.00 (Source: Medallion Labs). If this application allowed us to skip this step for a large number of products and regulators were willing to accept these results, there could be significant savings over a large product catalog.
-
+A test for fat content in food costs around $199.00 (Source: Medallion Labs). If technology like this allowed food manufacturers to expedite or bypass this process for a large number of products (assuming successful coordination with the relevant regulators), there could be significant savings over a large product catalog. Even without using this tool to skip regulatory steps, it could be used as a valuable pre-screening option to determine if the product is likely to meet nutritional specifications before subjecting it to expensive nutritional tests.
 
 For the goal of calorie regression, the primary metric is MAE (Mean Absolute Error), which describes the average number of calories by which the predicted value varies from the actual value.
 The formula is given below where x is the actual value, y is the predicted value, and D is the number of data points being evaluated.
